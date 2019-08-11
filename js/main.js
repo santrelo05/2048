@@ -1,6 +1,7 @@
 /*Math.floor(Math.random() * 16) + 1 */
 
 let botones = Array.from(document.querySelectorAll(".boton"));
+let boton = Array.from(document.querySelectorAll(".boto"));
 let cont = 0;
 let fila = [1,2,3,4];
 let colum = [4,8,12,16];
@@ -22,8 +23,10 @@ function setElement(){
             let probab = Math.floor(Math.random() * 10) + 1;
             if(probab<10){
             botones[numero-1].value = "2";
+            botones[numero-1].classList.add("verde");
             }else{
             botones[numero-1].value = "4";
+            botones[numero-1].classList.add("verde");
             }
             cont=1;
         }
@@ -37,6 +40,7 @@ function moveRight(){
             if(botones[j+(4*i)].value!=" "){
                 pila.push(parseInt(botones[j+(4*i)].value));
                 botones[j+(4*i)].value = " ";
+                botones[j+(4*i)].classList.remove("verde");
             } 
         }
         sumarRight(i,3,-1);
@@ -49,6 +53,7 @@ function moveLeft(){
             if(botones[j+(4*i)].value!=" "){
                 pila.push(parseInt(botones[j+(4*i)].value));
                 botones[j+(4*i)].value = " ";
+                botones[j+(4*i)].classList.remove("verde");
             } 
         }
         sumarRight(i,0,1);
@@ -62,6 +67,7 @@ function moveDown(){
             if(botones[i+(4*j)].value!=" "){
                 pila.push(parseInt(botones[i+(4*j)].value));
                 botones[i+(4*j)].value = " ";
+                botones[i+(4*j)].classList.remove("verde");
             }
         }
         sumarUp(i,3,-1);
@@ -75,6 +81,7 @@ function moveUp(){
             if(botones[i+(4*j)].value!=" "){
                 pila.push(parseInt(botones[i+(4*j)].value));
                 botones[i+(4*j)].value = " ";
+                botones[i+(4*j)].classList.remove("verde");
             }
         }
         sumarUp(i,0,1);
@@ -86,12 +93,14 @@ function sumarUp(target,posicion,extra){
     if(longitud>1){
         for(var i = 0; i<pila.length;i++){
             if(pila[i] == pila[i+1]){
-                botones[target+(posicion*4)].value = pila[i] + pila[i+1];        
+                botones[target+(posicion*4)].value = pila[i] + pila[i+1]; 
+                botones[target+(posicion*4)].classList.add("verde");       
                 posicion= posicion + extra;
                 i++;
             }
             else{
                 botones[target+(posicion*4)].value = pila[i];
+                botones[target+(posicion*4)].classList.add("verde"); 
                 posicion = posicion + extra;
             }
         }
@@ -99,6 +108,7 @@ function sumarUp(target,posicion,extra){
     }
     else if(longitud==1){
         botones[target+(posicion*4)].value = pila.pop();
+        botones[target+(posicion*4)].classList.add("verde"); 
        
     }
     pila=[];
@@ -109,12 +119,14 @@ function sumarRight(target,posicion,extra){
     if(longitud>1){
         for(var i = 0; i<pila.length;i++){
             if(pila[i] == pila[i+1]){
-                botones[posicion+(target*4)].value = pila[i] + pila[i+1];        
+                botones[posicion+(target*4)].value = pila[i] + pila[i+1];
+                botones[posicion+(target*4)].classList.add("verde");         
                 posicion= posicion + extra;
                 i++;
             }
             else{
                 botones[posicion+(target*4)].value = pila[i];
+                botones[posicion+(target*4)].classList.add("verde");    
                 posicion = posicion + extra;
             }
         }
@@ -122,6 +134,7 @@ function sumarRight(target,posicion,extra){
     }
     else if(longitud==1){
         botones[posicion+(target*4)].value = pila.pop();
+        botones[posicion+(target*4)].classList.add("verde");    
        
     }
     pila=[];
