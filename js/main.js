@@ -4,7 +4,8 @@ let botones = Array.from(document.querySelectorAll(".boton"));
 let cont = 0;
 let fila = [1,2,3,4];
 let colum = [4,8,12,16];
-let pila = [],past=0,now=-1,global = 0;
+let pila = [];
+var posicion,extra;
 window.onload = init;
 
 function init(){
@@ -30,6 +31,44 @@ function setElement(){
     cont = 0;
 }
 
+function moveRight(){
+    for(var i=0;i<4;i++){
+        for(var j=3;j>=0;j--){
+            if(botones[j+(4*i)].value!=" "){
+                pila.push(parseInt(botones[j+(4*i)].value));
+                botones[j+(4*i)].value = " ";
+            } 
+        }
+        sumarRight(i,3,-1);
+    }
+    setElement();
+}
+function moveLeft(){
+    for(var i=0;i<4;i++){
+        for(var j=0;j<4;j++){
+            if(botones[j+(4*i)].value!=" "){
+                pila.push(parseInt(botones[j+(4*i)].value));
+                botones[j+(4*i)].value = " ";
+            } 
+        }
+        sumarRight(i,0,1);
+    }
+    setElement();
+}
+
+function moveDown(){
+    for(var i=0;i<4;i++){
+        for(var j=3;j>=0;j--){
+            if(botones[i+(4*j)].value!=" "){
+                pila.push(parseInt(botones[i+(4*j)].value));
+                botones[i+(4*j)].value = " ";
+            }
+        }
+        sumarUp(i,3,-1);
+    }
+    setElement();
+}
+
 function moveUp(){
     for(var i=0;i<4;i++){
         for(var j=0;j<4;j++){
@@ -38,29 +77,51 @@ function moveUp(){
                 botones[i+(4*j)].value = " ";
             }
         }
-        sumarUp(i);
+        sumarUp(i,0,1);
     }
     setElement();
 }
-function sumarUp(target){
+function sumarUp(target,posicion,extra){
     var longitud = pila.length;
-    var posicion = 0;
     if(longitud>1){
         for(var i = 0; i<pila.length;i++){
             if(pila[i] == pila[i+1]){
                 botones[target+(posicion*4)].value = pila[i] + pila[i+1];        
-                posicion++;
+                posicion= posicion + extra;
                 i++;
             }
             else{
                 botones[target+(posicion*4)].value = pila[i];
-                posicion++;
+                posicion = posicion + extra;
             }
         }
         
     }
     else if(longitud==1){
-        botones[target].value = pila.pop();
+        botones[target+(posicion*4)].value = pila.pop();
+       
+    }
+    pila=[];
+}
+
+function sumarRight(target,posicion,extra){
+    var longitud = pila.length;
+    if(longitud>1){
+        for(var i = 0; i<pila.length;i++){
+            if(pila[i] == pila[i+1]){
+                botones[posicion+(target*4)].value = pila[i] + pila[i+1];        
+                posicion= posicion + extra;
+                i++;
+            }
+            else{
+                botones[posicion+(target*4)].value = pila[i];
+                posicion = posicion + extra;
+            }
+        }
+        
+    }
+    else if(longitud==1){
+        botones[posicion+(target*4)].value = pila.pop();
        
     }
     pila=[];
