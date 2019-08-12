@@ -1,5 +1,30 @@
 /*Math.floor(Math.random() * 16) + 1 */
 
+var element = document.getElementById("cuadro");
+
+var mc = new Hammer(element);
+mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
+mc.on("swipeleft", function () { 
+  
+    moveLeft();
+}); 
+
+mc.on("swiperight", function () { 
+ 
+    moveRight();
+});
+
+mc.on("swipeup", function () { 
+    
+    moveUp();
+}); 
+
+mc.on("swipedown", function () { 
+
+    moveDown();
+});
+
 let botones = Array.from(document.querySelectorAll(".boton"));
 let boton = Array.from(document.querySelectorAll(".boto"));
 let cont = 0;
