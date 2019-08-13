@@ -71,6 +71,13 @@
     align-items: center;
 }*/
 
+.home{
+  background-image: url(../img/fondo.png);
+  background-position: center center;
+  background-size: 100%;
+  overflow: hidden;
+
+}
 
 
 
