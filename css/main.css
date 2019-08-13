@@ -26,6 +26,10 @@
   height: 100vh;
   background-color: #B0920E;
   background-image: url("../img/fondo.png");
+  background-position: center center;
+  background-size: 100%;
+  overflow: hidden;
+  background-repeat: no-repeat;
 }
 .cont {
  
@@ -72,7 +76,7 @@
 }*/
 
 .home{
-  background-image: url(../img/fondo.png);
+  background-image: url(../img/fondo2.png);
   background-position: center center;
   background-size: 100%;
   overflow: hidden;
