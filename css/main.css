@@ -6,16 +6,11 @@
   color:white;
   font-size:16px;
 }
-.sii{
-  height: 100vh;
-  background-color:green;
- 
-}
+
 .verde{
+  
   background:green ;
 }
-
-
 
 .cuadro {
   padding: 5px;
@@ -27,7 +22,10 @@
   display: none;
 }
 
-
+.alturatotal{
+  height: 100vh;
+  background-color: #B0920E;
+}
 .cont {
  
   width:80%;

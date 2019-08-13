@@ -1,5 +1,3 @@
-/*Math.floor(Math.random() * 16) + 1 */
-
 var element = document.getElementById("cuadro");
 
 var mc = new Hammer(element);
