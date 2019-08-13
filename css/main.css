@@ -25,18 +25,17 @@
 .alturatotal{
   height: 100vh;
   background-color: #B0920E;
+  background-image: url("../img/fondo.png");
 }
 .cont {
  
   width:80%;
   margin:0 auto;
-  background-color: red;
+
 }
 
 .box-container {
   width:100%;
- 
-
 }
 
 .icon-box {
@@ -44,7 +43,6 @@
   display: inline;
   float:left;
   background:red;
-
   margin: 1%;
   
 }
