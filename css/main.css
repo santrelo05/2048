@@ -32,7 +32,7 @@ html, body {
   height: 100vh;
   background-color: #B0920E;
   background-image: url("../img/fondo.png");
-  background-position: 0 center;
+  background-position: 0 0;
   overflow: hidden;
   background-repeat: no-repeat;
 }
