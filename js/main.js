@@ -9,7 +9,6 @@ mc.on("swipeleft", function () {
 }); 
 
 mc.on("swiperight", function () { 
- alert("derecha");
     moveRight();
 });
 
