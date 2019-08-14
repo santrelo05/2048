@@ -43,11 +43,11 @@ function setElement(){
         if(valor === 0){
             let probab = Math.floor(Math.random() * 10) + 1;
             if(probab<10){
-            botones[numero-1].src="../img/2.png";
+            botones[numero-1].src="img/2.png";
             botones[numero-1].classList.remove("0");
             botones[numero-1].classList.add("2");
             }else{
-                botones[numero-1].src="../img/4.png";
+                botones[numero-1].src="img/4.png";
                 botones[numero-1].classList.remove("0");
                 botones[numero-1].classList.add("4");
             }
@@ -65,7 +65,7 @@ function moveRight(){
                 nameclass = botones[j+(4*i)].classList[0];
                 botones[j+(4*i)].classList.remove(nameclass);
                 botones[j+(4*i)].classList.add("0");
-                botones[j+(4*i)].src = "../img/logo1.jpg"
+                botones[j+(4*i)].src = "img/logo1.jpg"
             } 
         }
         sumar(i,3,-1,4,1);
@@ -80,7 +80,7 @@ function moveLeft(){
                 nameclass = botones[j+(4*i)].classList[0];
                 botones[j+(4*i)].classList.remove(nameclass);
                 botones[j+(4*i)].classList.add("0");
-                botones[j+(4*i)].src = "../img/logo1.jpg"
+                botones[j+(4*i)].src = "img/logo1.jpg"
             } 
         }
         sumar(i,0,1,4,1);
@@ -96,7 +96,7 @@ function moveDown(){
                 nameclass = botones[i+(4*j)].classList[0];
                 botones[i+(4*j)].classList.remove(nameclass);
                 botones[i+(4*j)].classList.add("0");
-                botones[i+(4*j)].src = "../img/logo1.jpg";
+                botones[i+(4*j)].src = "img/logo1.jpg";
             }
         }
         sumar(i,3,-1,1,4);
@@ -112,7 +112,7 @@ function moveUp(){
                 nameclass = botones[i+(4*j)].classList[0];
                 botones[i+(4*j)].classList.remove(nameclass);
                 botones[i+(4*j)].classList.add("0");
-                botones[i+(4*j)].src = "../img/logo1.jpg";
+                botones[i+(4*j)].src = "img/logo1.jpg";
             }
         }
         sumar(i,0,1,1,4);
@@ -129,7 +129,7 @@ function sumar(target,posicion,extra,multi1,multi2){
                 nameclass = botones[(target*multi1)+(posicion*multi2)].classList[0];
                 botones[(target*multi1)+(posicion*multi2)].classList.remove(nameclass);
                 botones[(target*multi1)+(posicion*multi2)].classList.add(suma);
-                botones[(target*multi1)+(posicion*multi2)].src= "../img/"+suma+".png";     
+                botones[(target*multi1)+(posicion*multi2)].src= "img/"+suma+".png";     
                 posicion= posicion + extra;
                 i++;
             }
@@ -137,7 +137,7 @@ function sumar(target,posicion,extra,multi1,multi2){
                 nameclass = botones[(target*multi1)+(posicion*multi2)].classList[0];
                 botones[(target*multi1)+(posicion*multi2)].classList.remove(nameclass);
                 botones[(target*multi1)+(posicion*multi2)].classList.add(pila[i]);
-                botones[(target*multi1)+(posicion*multi2)].src= "../img/"+pila[i]+".png";
+                botones[(target*multi1)+(posicion*multi2)].src= "img/"+pila[i]+".png";
                 posicion = posicion + extra;
             }
         }
@@ -149,7 +149,7 @@ function sumar(target,posicion,extra,multi1,multi2){
         nameclass = botones[(target*multi1)+(posicion*multi2)].classList[0];
         botones[(target*multi1)+(posicion*multi2)].classList.remove(nameclass);
         botones[(target*multi1)+(posicion*multi2)].classList.add(suma);
-        botones[(target*multi1)+(posicion*multi2)].src = "../img/"+suma+".png";
+        botones[(target*multi1)+(posicion*multi2)].src = "img/"+suma+".png";
     }
     pila=[];
 }
