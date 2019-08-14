@@ -1,4 +1,4 @@
-body {
+html, body {
   height: 100vh;
   background-color: #B0920E;
 }
@@ -28,11 +28,11 @@ body {
 }
 
 .alturatotal{
+  padding-top:20%;
   height: 100vh;
   background-color: #B0920E;
-  background-image: url("../img/fondo.png");
+  background-image: url("../img/2246.png");
   background-position: center center;
-  background-size: 100%;
   overflow: hidden;
   background-repeat: no-repeat;
 }
