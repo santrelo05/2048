@@ -12,6 +12,9 @@ html, body {
   font-size:16px;
 }
 
+.imagen1{
+  background-image: url("../img/2246.png");
+}
 .verde{
   
   background:green ;
@@ -31,7 +34,7 @@ html, body {
   padding-top:20%;
   height: 100vh;
   background-color: #B0920E;
-  background-image: url("../img/sisi.jpg");
+  /*background-image: url("../img/2246.png");*/
   overflow: hidden;
   background-repeat: no-repeat;
 }
@@ -79,14 +82,7 @@ html, body {
     align-items: center;
 }*/
 
-.home{
-  background-image: url(../img/fondo2.png);
-  background-position: center center;
-  background-size: 100%;
-  overflow: hidden;
-  background-repeat: no-repeat;
 
-}
 
 
 
