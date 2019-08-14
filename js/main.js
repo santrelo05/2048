@@ -24,7 +24,6 @@ mc.on("swipedown", function () {
 });
 
 let botones = Array.from(document.querySelectorAll(".boton"));
-let boton = Array.from(document.querySelectorAll(".boto"));
 let cont = 0;
 let fila = [1,2,3,4];
 let colum = [4,8,12,16];
