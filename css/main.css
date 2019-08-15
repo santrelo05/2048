@@ -30,7 +30,7 @@ html, body {
   padding-top:20%;
   width: 100%;
   height: 100vh;
-  background-image: url("../img/lele.jpg");
+  background-image: url("../img/fondo.jpg");
 }
 .cont {
  
@@ -91,7 +91,6 @@ html, body {
 .socio4{
   width: 720px;
   height: 1500px;
-
 }
 
 
