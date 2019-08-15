@@ -74,6 +74,27 @@ html, body {
   
 }
 
+.socio1{
+  width: 720px;
+  height: 1550px;
+  background-color: green;
+}
+.socio2{
+  width: 720px;
+  height: 1520px;
+  background-color: red;
+}
+.socio3{
+  width: 720px;
+  height: 1510px;
+  background-color:yellow;
+}
+.socio4{
+  width: 720px;
+  height: 1500px;
+  background-color: blue;
+}
+
 
 
 
