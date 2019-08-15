@@ -68,9 +68,11 @@ html, body {
 }
 
 .socio{
+  background-image: url("../img/sisi.jpg");
   width: 720px;
   height: 1550px;
   background-color: green;
+  
 }
 
 
