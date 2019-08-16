@@ -66,34 +66,19 @@ html, body {
     }
 }
 
-.socio{
-  background-image: url("../img/sisi.jpg");
-  width: 720px;
-  height: 1490px;
-  background-color: green;
-  
-}
-
-.socio1{
-  width: 720px;
-  height: 1550px;
-  background-color: green;
-}
-.socio2{
-  width: 720px;
-  height: 1520px;
-  background-color: red;
-}
-.socio3{
-  width: 720px;
-  height: 1510px;
-  background-color:yellow;
-}
-.socio4{
-  width: 720px;
-  height: 1500px;
+.liviano8{
+  padding-top:20%;
+  width: 400px;
+  height: 700px;
+  background-image: url("../img/Recurso\ 8.png");
+  background-repeat: no-repeat;
 }
 
 
-
-
+.pesado8{
+  padding-top:20%;
+  width: 400px;
+  height: 700px;
+  background-image: url("../img/Recurso\ 8\ 720.png");
+  background-repeat: no-repeat;
+}
