@@ -68,8 +68,8 @@ html, body {
 
 .liviano8{
   padding-top:20%;
-  width: 400px;
-  height: 700px;
+  width: 100%;
+  height: 100vh;
   background-image: url("../img/Recurso\ 8.png");
   background-repeat: no-repeat;
 }
@@ -77,8 +77,8 @@ html, body {
 
 .pesado8{
   padding-top:20%;
-  width: 400px;
-  height: 700px;
+  width: 100%;
+  height: 100vh;
   background-image: url("../img/Recurso\ 8\ 720.png");
   background-repeat: no-repeat;
 }
