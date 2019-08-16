@@ -154,16 +154,3 @@ function sumar(target,posicion,extra,multi1,multi2){
     pila=[];
 }
 
-function liviano(){
-var el = document.getElementById("pesado");
-el.classList.add("none");
-el = document.getElementById("liviano");
-el.classList.remove("none");
-}
-
-function pesado(){
-    var  el = document.getElementById("liviano");
-    el.classList.add("none");
-    el = document.getElementById("pesado");
-    el.classList.remove("none");
-}
