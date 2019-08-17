@@ -65,7 +65,7 @@ function moveRight(){
                 nameclass = botones[j+(4*i)].classList[0];
                 botones[j+(4*i)].classList.remove(nameclass);
                 botones[j+(4*i)].classList.add("0");
-                botones[j+(4*i)].src = "img/logo1.jpg"
+                botones[j+(4*i)].src = "img/0.png"
             } 
         }
         sumar(i,3,-1,4,1);
@@ -80,7 +80,7 @@ function moveLeft(){
                 nameclass = botones[j+(4*i)].classList[0];
                 botones[j+(4*i)].classList.remove(nameclass);
                 botones[j+(4*i)].classList.add("0");
-                botones[j+(4*i)].src = "img/logo1.jpg"
+                botones[j+(4*i)].src = "img/0.png"
             } 
         }
         sumar(i,0,1,4,1);
@@ -96,7 +96,7 @@ function moveDown(){
                 nameclass = botones[i+(4*j)].classList[0];
                 botones[i+(4*j)].classList.remove(nameclass);
                 botones[i+(4*j)].classList.add("0");
-                botones[i+(4*j)].src = "img/logo1.jpg";
+                botones[i+(4*j)].src = "img/0.png";
             }
         }
         sumar(i,3,-1,1,4);
@@ -112,7 +112,7 @@ function moveUp(){
                 nameclass = botones[i+(4*j)].classList[0];
                 botones[i+(4*j)].classList.remove(nameclass);
                 botones[i+(4*j)].classList.add("0");
-                botones[i+(4*j)].src = "img/logo1.jpg";
+                botones[i+(4*j)].src = "img/0.png";
             }
         }
         sumar(i,0,1,1,4);
