@@ -23,7 +23,7 @@ mc.on("swipedown", function () {
 });
 
 
-let botones = Array.from(document.querySelectorAll("img"));
+let botones = Array.from(document.querySelectorAll(".caja"));
 var nameclass,suma;
 let cont = 0;
 let pila = [];
@@ -31,6 +31,11 @@ var posicion,extra;
 window.onload = init;
 
 function init(){
+    for(i in botones){
+        botones[i].classList.remove("caja");
+        botones[i].classList.add("0");
+    }
+
 setElement();
 setElement();
 
@@ -154,3 +159,19 @@ function sumar(target,posicion,extra,multi1,multi2){
     pila=[];
 }
 
+function ayuda(){
+    var juego = document.getElementById("juego");
+    juego.classList.add("none");
+
+    var ayuda = document.getElementById("ayuda");
+    ayuda.classList.remove("none");
+}
+function juego(){
+    
+
+    var ayuda = document.getElementById("ayuda");
+    ayuda.classList.add("none");
+
+    var juego = document.getElementById("juego");
+    juego.classList.remove("none");
+}
