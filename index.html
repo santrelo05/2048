@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title> 
 </head>
-<body> 
-        <section id="ayuda" class="none">
-                <button onclick="juego()">volver al juego</button>
-
-        </section>
+<body>
         <section id="menu" class="none">
                 <div></div>
         </section>    
@@ -27,15 +23,47 @@
                                                 </div>
                                         </div>
                                         <div class="reduce box">
-                                                <img class="sisi" onclick="ayuda()" src="img/ayuda.png" alt="">
-                                                <img class="sisi" src="img/deshacer.png" alt="">
-                                                <img class="sisi"src="img/ajustes.png" alt="">
+                                                <img class="" onclick="ayuda()" src="img/ayuda.png" alt="">
+                                                <img class="" src="img/deshacer.png" alt="">
+                                                <img class="" onclick="config()" src="img/ajustes.png" alt="">
                                         </div>
                                 </div>
                         </div>
                         <div class="cont">
-                                <div id="ayuda" class="sisi none">
-
+                                <div id="ayuda" class="none">
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/2.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/4.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/8.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/16.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/32.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/64.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/128.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/256.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/512.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/1024.png"  alt="">
+                                        </div>
+                                        <div class="icon-box box">
+                                                <img class="0" src="img/2048.png"  alt="">
+                                        </div>
                                 </div>
                                 <div id="cuadro" class="box-container">
                                         
@@ -93,13 +121,25 @@
                         </div>
                         <div class="cont-up-down box">
                                 <div class="boton-centrado">
-                                       
                                         <h2>Record: 999999</h2>
-                                
                                 </div>
                         </div>
                 </div>
         </section> 
+        <section id="config" class="none">
+                <div class="alturatotal">
+                        <div class="pantallaconfig">
+                                <div class="boton-centrado">                   
+                                        <h1 class="tit">Ajustes</h1>      
+                                </div>
+                                <div class="ancho centrar">
+                                        <img class="tamaño-boton margen" src="img/ayuda2.png" alt="">
+                                        <img class="tamaño-boton" src="img/reiniciar.png" alt="">
+                                        <img  onclick="volverconfig()" class=" tamaño-boton margen" src="img/vovler.png" alt="">
+                                </div>
+                        </div>
+                </div>
+        </section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>

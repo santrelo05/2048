@@ -29,6 +29,7 @@ let cont = 0;
 let pila = [];
 var posicion,extra;
 window.onload = init;
+var contayuda;
 
 function init(){
     for(i in botones){
@@ -160,18 +161,40 @@ function sumar(target,posicion,extra,multi1,multi2){
 }
 
 function ayuda(){
+
+    if(contayuda==undefined){
+        contayuda = 0 ;
+    }
+
+    if(contayuda==0){
+    var juego = document.getElementById("cuadro");
+    juego.classList.add("none");
+
+    var ayud = document.getElementById("ayuda");
+    ayud.classList.remove("none");
+    contayuda = 1;
+    }
+    else if(contayuda==1){
+    var juego = document.getElementById("cuadro");
+    juego.classList.remove("none");
+
+    var ayud = document.getElementById("ayuda");
+    ayud.classList.add("none");
+    contayuda = 0;
+
+    }
+}
+function config(){
     var juego = document.getElementById("juego");
     juego.classList.add("none");
 
-    var ayuda = document.getElementById("ayuda");
-    ayuda.classList.remove("none");
+    var conf = document.getElementById("config");
+    conf.classList.remove("none");
 }
-function juego(){
-    
-
-    var ayuda = document.getElementById("ayuda");
-    ayuda.classList.add("none");
-
+function volverconfig(){
     var juego = document.getElementById("juego");
     juego.classList.remove("none");
+
+    var conf = document.getElementById("config");
+    conf.classList.add("none");
 }
