@@ -28,8 +28,12 @@ var nameclass,suma;
 let cont = 0;
 let pila = [];
 var posicion,extra;
-window.onload = init;
 var contayuda;
+var pila1=[];
+var igual = 0;
+
+window.onload = init;
+
 
 function init(){
     for(i in botones){
@@ -43,24 +47,29 @@ setElement();
 }
 
 function setElement(){
-    while(cont < 1){
-        let numero = Math.floor(Math.random() * 16) + 1;
-        let valor = parseInt(botones[numero-1].classList[0]);
-        if(valor === 0){
-            let probab = Math.floor(Math.random() * 10) + 1;
-            if(probab<10){
-            botones[numero-1].src="img/2.png";
-            botones[numero-1].classList.remove("0");
-            botones[numero-1].classList.add("2");
-            }else{
-                botones[numero-1].src="img/4.png";
-                botones[numero-1].classList.remove("0");
-                botones[numero-1].classList.add("4");
-            }
-            cont=1;
-        }
+    if(igual == 4){
     }
-    cont = 0;
+    else{
+        while(cont < 1){
+            let numero = Math.floor(Math.random() * 16) + 1;
+            let valor = parseInt(botones[numero-1].classList[0]);
+            if(valor === 0){
+                let probab = Math.floor(Math.random() * 10) + 1;
+                if(probab<10){
+                botones[numero-1].src="img/2.png";
+                botones[numero-1].classList.remove("0");
+                botones[numero-1].classList.add("2");
+                }else{
+                    botones[numero-1].src="img/4.png";
+                    botones[numero-1].classList.remove("0");
+                    botones[numero-1].classList.add("4");
+                }
+                cont=1;
+            }
+        }
+        cont = 0;
+    }
+    igual = 0;
 }
 
 function moveRight(){
@@ -68,11 +77,15 @@ function moveRight(){
         for(var j=3;j>=0;j--){
             if(botones[j+(4*i)].classList[0]!="0"){
                 pila.push(parseInt(botones[j+(4*i)].classList[0]));
+                pila1.push(parseInt(botones[j+(4*i)].classList[0]));
                 nameclass = botones[j+(4*i)].classList[0];
                 botones[j+(4*i)].classList.remove(nameclass);
                 botones[j+(4*i)].classList.add("0");
                 botones[j+(4*i)].src = "img/0.png"
             } 
+            else{
+                pila1.push(undefined);
+            }
         }
         sumar(i,3,-1,4,1);
     }
@@ -83,11 +96,15 @@ function moveLeft(){
         for(var j=0;j<4;j++){
             if(botones[j+(4*i)].classList[0]!="0"){
                 pila.push(parseInt(botones[j+(4*i)].classList[0]));
+                pila1.push(parseInt(botones[j+(4*i)].classList[0]));
                 nameclass = botones[j+(4*i)].classList[0];
                 botones[j+(4*i)].classList.remove(nameclass);
                 botones[j+(4*i)].classList.add("0");
                 botones[j+(4*i)].src = "img/0.png"
-            } 
+            }
+            else{
+                pila1.push(undefined);
+            }
         }
         sumar(i,0,1,4,1);
     }
@@ -99,10 +116,14 @@ function moveDown(){
         for(var j=3;j>=0;j--){
             if(botones[i+(4*j)].classList!="0"){
                 pila.push(parseInt(botones[i+(4*j)].classList[0]));
+                pila1.push(parseInt(botones[i+(4*j)].classList[0]));
                 nameclass = botones[i+(4*j)].classList[0];
                 botones[i+(4*j)].classList.remove(nameclass);
                 botones[i+(4*j)].classList.add("0");
                 botones[i+(4*j)].src = "img/0.png";
+            }
+            else{
+                pila1.push(undefined);
             }
         }
         sumar(i,3,-1,1,4);
@@ -115,10 +136,14 @@ function moveUp(){
         for(var j=0;j<4;j++){
             if(botones[i+(4*j)].classList!="0"){
                 pila.push(parseInt(botones[i+(4*j)].classList[0]));
+                pila1.push(parseInt(botones[i+(4*j)].classList[0]));
                 nameclass = botones[i+(4*j)].classList[0];
                 botones[i+(4*j)].classList.remove(nameclass);
                 botones[i+(4*j)].classList.add("0");
                 botones[i+(4*j)].src = "img/0.png";
+            }
+            else{
+                pila1.push(undefined);
             }
         }
         sumar(i,0,1,1,4);
@@ -128,6 +153,15 @@ function moveUp(){
 
 function sumar(target,posicion,extra,multi1,multi2){
     var longitud = pila.length;
+    var contador = 0;
+    for(var i = 0;i<pila1.length;i++){
+        if(pila[i]==pila1[i]){
+            contador++;
+        }
+    }
+    if(contador==4){
+        igual++;
+    }
     if(longitud>1){
         for(var i = 0; i<pila.length;i++){
             if(pila[i] == pila[i+1]){
@@ -148,7 +182,7 @@ function sumar(target,posicion,extra,multi1,multi2){
             }
         }
         
-    }
+    }   
     else if(longitud==1){
 
         suma = pila.pop();
@@ -158,6 +192,7 @@ function sumar(target,posicion,extra,multi1,multi2){
         botones[(target*multi1)+(posicion*multi2)].src = "img/"+suma+".png";
     }
     pila=[];
+    pila1=[];
 }
 
 function ayuda(){
