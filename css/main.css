@@ -126,7 +126,6 @@ html, body {
 
 .tit{
   margin: 0;
-  text-align: center;
   padding: 0 15% 0 15%; 
 }
 .margen{
@@ -140,7 +139,6 @@ html, body {
 
 .ancho{
   width: 50%;
-
 }
 
 
