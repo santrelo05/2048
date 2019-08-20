@@ -75,6 +75,7 @@ html, body {
   background-image: url("../img/400x700.png");
   background-repeat: no-repeat;
 }
+
 .cont {
  
   width: 70%;
@@ -84,6 +85,10 @@ html, body {
 .cont1{
   width: 90%;
   height: 90%;
+  margin:auto;
+}
+.cont2{
+  width: 70%;
   margin:auto;
 }
 .cont-up-down{
@@ -198,7 +203,7 @@ html, body {
   padding-top: 50%;
 }
 .margen5{
-  padding-top: 210%;
+  padding-top: 240%;
   color: black;
 }
 .tamaño-boton{
