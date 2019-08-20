@@ -163,11 +163,11 @@
                                         </div>     
                                 </div>
                                 <div class="ancho centrar">
-                                        <img  onclick="cambiodenone('ayuda3','pantinicial');" class="margen4 tamaño-boton" src="img/volver.png" alt="">
+                                        <img  onclick="reload('config','juego');" class="margen4 tamaño-boton" src="img/volver.png" alt="">
                                 </div>
                         </div>
         </section>
-        <section id="ganaste" class="">
+        <section id="ganaste" class="none">
                 <div class="alturatotal">
                                 <div class="ancho boton-centrado">                   
                                                 <h1 class="tit">Ganaste</h1>      
@@ -180,12 +180,31 @@
 
                          
                         <div class="ancho centrar">
-                                <img  onclick="cambiodenone('ayuda3','pantinicial');" class="tamaño-boton" src="img/nuevo.png" alt="">
+                                <img  onclick="reload('ganaste','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
                         </div>
 
                 </div>
 
         </section>
+        <section id="perdiste" class="">
+                        <div class="alturatotal">
+                                        <div class="ancho boton-centrado">                   
+                                                        <h1 class="tit">Perdiste</h1>      
+                                        </div>
+                                <div class="anchoperdiste">
+                                              
+                                        <img class="fotoperdiste" src="img/Terminado.png" alt="">
+                                     
+                                </div>
+        
+                                 
+                                <div class="ancho centrar">
+                                        <img  onclick="reload('perdiste','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
+                                </div>
+        
+                        </div>
+        
+                </section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>

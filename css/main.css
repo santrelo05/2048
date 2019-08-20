@@ -222,9 +222,15 @@ html, body {
   width: 100%;
   padding: 10% 20% 0 5%;
 }
-
+.anchoperdiste {
+  width: 100%;
+  padding: 10% 20% 0 10%;
+}
 .fotoganaste{
   margin-bottom: 5%;
+}
+.fotoperdiste {
+  margin-bottom: 50%;
 }
 
 

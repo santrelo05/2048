@@ -95,13 +95,13 @@ function setElement(){
             }
         }
         else{
-        alert("perdiste");
             record.push(puntaje);
+            cambiodenone('juego','perdiste');
         }
     }
     else{
-        alert("ganaste");
         record.push(puntaje);
+        cambiodenone('juego','ganaste');
     } 
     igual = 0;
 }
@@ -239,7 +239,7 @@ function sumar(target,posicion,extra,multi1,multi2){
 
 function verificar(){
     for(var i = 0 ; i<15;i++){
-        if(parseInt(botones[i].classList[0])== 0){
+        if(parseInt(botones[i].classList[0]) == 0){
             return 0;
         }   
         if(parseInt(botones[i].classList[0]) == parseInt(botones[i+1].classList[0])){
@@ -248,7 +248,7 @@ function verificar(){
         }
     }
     for(var i = 0 ; i<12;i++){
-        if(parseInt(botones[i].classList[0])== 0){
+        if(parseInt(botones[i].classList[0]) == 0){
             return 0;
         }   
         if(parseInt(botones[i].classList[0]) == parseInt(botones[i+4].classList[0])){
@@ -269,7 +269,7 @@ function verificarwin(){
     return 0;
 }
 
-function reload(){
+function reload(pantalla1,pantalla2){
     record.push(puntaje);
     puntaje = 0;
     for(i in record){
@@ -279,7 +279,7 @@ function reload(){
     }
     document.getElementById("Record").innerHTML = "Record: "+mxrecord;
     document.getElementById("Puntaje").innerHTML="Puntaje:<br>"+puntaje;
-    cambiodenone("config","juego");
+    cambiodenone(pantalla1,pantalla2);
     nameclass
     for(i in botones){
         nameclass = botones[i].classList[0];
