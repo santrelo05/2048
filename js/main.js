@@ -1,3 +1,11 @@
+
+setTimeout(hideLoader, 2 * 1000);
+function hideLoader() {
+    
+    document.getElementById("loading").classList.add("none");
+    document.getElementById("pantinicial").classList.remove("none");
+
+}
 var element = document.getElementById("cuadro");
 
 var mc = new Hammer(element);

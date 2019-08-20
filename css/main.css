@@ -1,3 +1,13 @@
+
+#loading {
+  background: url('../img/gif-splash.gif') no-repeat center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999999;
+}
 @font-face{
   font-family: Obelixpro;
   src: url("../obelixpro/ObelixPro-cyr.ttf");
@@ -25,7 +35,7 @@ p{
 
 html, body {
   height: 100vh;
-  background-color: #B0920E;
+  background-color: #eae486;
 }
 
 .boton, .boton2{
@@ -183,6 +193,10 @@ html, body {
 }
 .margen4{
   padding-top: 50%;
+}
+.margen5{
+  padding-top: 210%;
+  color: black;
 }
 .tamaño-boton{
   width: 100%;
