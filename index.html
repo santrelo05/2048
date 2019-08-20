@@ -9,11 +9,18 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title> 
 </head>
-<body>
-        <section id="menu" class="none">
-                <div></div>
-        </section>    
-        <section id="juego" class="">
+<body>  
+        <section id="pantinicial" class="">
+                <div class="alturatotal1">
+                                <div class="">
+                                        <img class="box-ini centrar" onclick="jugar()" src="img/ayuda.png" alt="">
+                                </div>
+                        <div class="cont margen3">
+                                <img class="box-inicio centrar" onclick="jugar()" src="img/play.png" alt="">
+                        </div>
+                </div>
+        </section>
+        <section id="juego" class="none">
                 <div class="alturatotal">
                         <div class="cont-up-down">
                                 <div class="barra">
@@ -24,7 +31,7 @@
                                         </div>
                                         <div class="reduce box">
                                                 <img class="" onclick="ayuda()" src="img/ayuda.png" alt="">
-                                                <img class="" onClick="document.location.reload(true)" src="img/deshacer.png" alt="">
+                                                <img class="none" onClick="document.location.reload(true)" src="img/deshacer.png" alt="">
                                                 <img class="" onclick="config()" src="img/ajustes.png" alt="">
                                         </div>
                                 </div>
@@ -125,7 +132,10 @@
                                 </div>
                         </div>
                 </div>
-        </section> 
+        </section>
+        <section id="ayuda">
+
+        </section>
         <section id="config" class="none">
                 <div class="alturatotal">
                         <div class="pantallaconfig">

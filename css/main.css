@@ -43,6 +43,14 @@ html, body {
   display: none;
 }
 
+.alturatotal1{
+  
+ 
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/Inicio01.png");
+  background-repeat: no-repeat;
+}
 .alturatotal{
   
  
@@ -152,6 +160,9 @@ html, body {
 .margen2{
   margin-top:10%;
 }
+.margen3{
+  padding-top: 125%;
+}
 .tamaño-boton{
   width: 100%;
   height: auto;
@@ -161,5 +172,16 @@ html, body {
 .ancho{
   width: 35%;
 }
+.box-inicio{
+  width: 50%;
+  padding-top: 15%;
+}
+.box-ini{
+  width: 9%;
+  padding-top: 5%;
+  margin-right: 5%;
+  float: right;
+}
+
 
 

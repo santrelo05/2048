@@ -244,41 +244,20 @@ function verificarwin(){
     }
     return 0;
 }
+
+function jugar(){
+ document.getElementById("pantinicial").classList.add("none");
+ document.getElementById("juego").classList.remove("none");
+}
+
 function ayuda(){
-
-    if(contayuda==undefined){
-        contayuda = 0 ;
-    }
-
-    if(contayuda==0){
-    var juego = document.getElementById("cuadro");
-    juego.classList.add("none");
-
-    var ayud = document.getElementById("ayuda");
-    ayud.classList.remove("none");
-    contayuda = 1;
-    }
-    else if(contayuda==1){
-    var juego = document.getElementById("cuadro");
-    juego.classList.remove("none");
-
-    var ayud = document.getElementById("ayuda");
-    ayud.classList.add("none");
-    contayuda = 0;
-
-    }
+    
 }
 function config(){
-    var juego = document.getElementById("juego");
-    juego.classList.add("none");
-
-    var conf = document.getElementById("config");
-    conf.classList.remove("none");
+    document.getElementById("juego").classList.add("none");
+    document.getElementById("config").classList.remove("none");
 }
 function volverconfig(){
-    var juego = document.getElementById("juego");
-    juego.classList.remove("none");
-
-    var conf = document.getElementById("config");
-    conf.classList.add("none");
+    document.getElementById("juego").classList.remove("none");
+    document.getElementById("config").classList.add("none");
 }
