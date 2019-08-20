@@ -12,7 +12,6 @@ var mc = new Hammer(element);
 mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
 mc.on("swipeleft", function () { 
-  
     moveLeft();
 }); 
 
@@ -21,12 +20,10 @@ mc.on("swiperight", function () {
 });
 
 mc.on("swipeup", function () { 
-    
     moveUp();
 }); 
 
-mc.on("swipedown", function () { 
-
+mc.on("swipedown", function () {
     moveDown();
 });
 
@@ -43,6 +40,9 @@ var contboton=0;
 var igual = 0;
 var verf= 0;
 var verfwin = 0;
+var puntaje=0;
+var record=[0];
+var mxrecord=0;
 
 window.onload = init;
 
@@ -53,51 +53,61 @@ function init(){
         botones[i].classList.add("0");
     }
 
+    for(i in record){
+        if(record[i]>mxrecord){
+            mxrecord=record[i];
+        }
+    }
+    document.getElementById("Record").innerHTML = "Record: "+mxrecord;
 setElement();
 setElement();
 }
 
 function setElement(){
+   
     contboton=0;
     verfwin = verificarwin();
     verf = verificar();
 
     if(verfwin==0){
-    if(verf==0){
-    if(igual == 4){
-    }
-    else{
-        while(cont < 1){
-            let numero = Math.floor(Math.random() * 16) + 1;
-            let valor = parseInt(botones[numero-1].classList[0]);
-            if(valor === 0){
-                let probab = Math.floor(Math.random() * 10) + 1;
-                if(probab<10){
-                botones[numero-1].src="img/2.png";
-                botones[numero-1].classList.remove("0");
-                botones[numero-1].classList.add("2");
-                }else{
-                    botones[numero-1].src="img/4.png";
-                    botones[numero-1].classList.remove("0");
-                    botones[numero-1].classList.add("4");
+        if(verf==0){
+            if(igual == 4){
+            }
+            else{
+                while(cont < 1){
+                    let numero = Math.floor(Math.random() * 16) + 1;
+                    let valor = parseInt(botones[numero-1].classList[0]);
+                    if(valor === 0){
+                        let probab = Math.floor(Math.random() * 10) + 1;
+                        if(probab<10){
+                        botones[numero-1].src="img/2.png";
+                        botones[numero-1].classList.remove("0");
+                        botones[numero-1].classList.add("2");
+                        }else{
+                            botones[numero-1].src="img/4.png";
+                            botones[numero-1].classList.remove("0");
+                            botones[numero-1].classList.add("4");
+                        }
+                        cont=1;
+                    }
                 }
-                cont=1;
+                cont = 0;
             }
         }
-        cont = 0;
-    }
-    }
-    else{
-       alert("perdiste");
-    }
+        else{
+        alert("perdiste");
+            record.push(puntaje);
+        }
     }
     else{
         alert("ganaste");
+        record.push(puntaje);
     } 
     igual = 0;
 }
 
 function moveRight(){
+   
     for(var i=0;i<4;i++){
         for(var j=3;j>=0;j--){
             if(botones[j+(4*i)].classList[0]!="0"){
@@ -117,6 +127,7 @@ function moveRight(){
     setElement();
 }
 function moveLeft(){
+   
     for(var i=0;i<4;i++){
         for(var j=0;j<4;j++){
             if(botones[j+(4*i)].classList[0]!="0"){
@@ -137,6 +148,7 @@ function moveLeft(){
 }
 
 function moveDown(){
+   
     for(var i=0;i<4;i++){
         for(var j=3;j>=0;j--){
             if(botones[i+(4*j)].classList!="0"){
@@ -157,6 +169,7 @@ function moveDown(){
 }
 
 function moveUp(){
+   
     for(var i=0;i<4;i++){
         for(var j=0;j<4;j++){
             if(botones[i+(4*j)].classList!="0"){
@@ -191,7 +204,9 @@ function sumar(target,posicion,extra,multi1,multi2){
         for(var i = 0; i<pila.length;i++){
             if(pila[i] == pila[i+1]){
                 igual--;
+                
                 suma = pila[i] + pila[i+1];
+                puntaje+=suma;
                 nameclass = botones[(target*multi1)+(posicion*multi2)].classList[0];
                 botones[(target*multi1)+(posicion*multi2)].classList.remove(nameclass);
                 botones[(target*multi1)+(posicion*multi2)].classList.add(suma);
@@ -217,6 +232,7 @@ function sumar(target,posicion,extra,multi1,multi2){
         botones[(target*multi1)+(posicion*multi2)].classList.add(suma);
         botones[(target*multi1)+(posicion*multi2)].src = "img/"+suma+".png";
     }
+    document.getElementById("Puntaje").innerHTML="Puntaje:<br>"+puntaje;
     pila=[];
     pila1=[];
 }
@@ -254,7 +270,15 @@ function verificarwin(){
 }
 
 function reload(){
-
+    record.push(puntaje);
+    puntaje = 0;
+    for(i in record){
+        if(record[i]>mxrecord){
+            mxrecord=record[i];
+        }
+    }
+    document.getElementById("Record").innerHTML = "Record: "+mxrecord;
+    document.getElementById("Puntaje").innerHTML="Puntaje:<br>"+puntaje;
     cambiodenone("config","juego");
     nameclass
     for(i in botones){
