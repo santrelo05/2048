@@ -13,10 +13,10 @@
         <section id="pantinicial" class="">
                 <div class="alturatotal1">
                                 <div class="">
-                                        <img class="box-ini centrar" onclick="jugar()" src="img/ayuda.png" alt="">
+                                        <img class="box-ini centrar" onclick="cambiodenone('pantinicial','ayuda3');" src="img/ayuda.png" alt="">
                                 </div>
                         <div class="cont margen3">
-                                <img class="box-inicio centrar" onclick="jugar()" src="img/play.png" alt="">
+                                <img class="box-inicio centrar" onclick="cambiodenone('pantinicial','juego');" src="img/play.png" alt="">
                         </div>
                 </div>
         </section>
@@ -30,14 +30,14 @@
                                                 </div>
                                         </div>
                                         <div class="reduce box">
-                                                <img class="" onclick="ayuda()" src="img/ayuda.png" alt="">
+                                                <img class="" onclick="cambiodenone('juego','ayuda')" src="img/bombillo.png" alt="">
                                                 <img class="none" onClick="document.location.reload(true)" src="img/deshacer.png" alt="">
-                                                <img class="" onclick="config()" src="img/ajustes.png" alt="">
+                                                <img class="" onclick="cambiodenone('juego','config');" src="img/ajustes.png" alt="">
                                         </div>
                                 </div>
                         </div>
                         <div class="cont">
-                                <div id="ayuda" class="none">
+                                <div id="" class="none">
                                         <div class="icon-box box">
                                                 <img class="0" src="img/2.png"  alt="">
                                         </div>
@@ -133,8 +133,21 @@
                         </div>
                 </div>
         </section>
-        <section id="ayuda">
+        <section id="ayuda" class="none">
+                <div class="alturatotal">
+                        <div class="ancho boton-centrado">                   
+                                <h1 class="tit">Ayuda</h1>      
+                        </div>
+                        <br><br>
+                        <div class="centrar">
+                                <img class="" src="img/Listado.png" alt="">
+                        </div>
 
+                        <div class="ancho centrar">
+                                <img  onclick="cambiodenone('ayuda','juego');" class="margen4 tamaño-boton" src="img/volver.png" alt="">d
+                        </div>
+
+                </div>
         </section>
         <section id="config" class="none">
                 <div class="alturatotal">
@@ -143,13 +156,51 @@
                                         <h1 class="tit">Ajustes</h1>      
                                 </div>
                                 <div class="ancho centrar">
-                                        <img class="tamaño-boton margen" src="img/ayuda2.png" alt="">
-                                        <img class="tamaño-boton margen2" src="img/reiniciar.png" alt="">
-                                        <img  onclick="volverconfig()" class=" tamaño-boton margen" src="img/volver.png" alt="">
+                                        <img onclick="cambiodenone('config','ayuda2');" class="tamaño-boton margen" src="img/ayuda2.png" alt="">
+                                        <img onclick="reload()" class="tamaño-boton margen2" src="img/reiniciar.png" alt="">
+                                        <img  onclick="cambiodenone('config','juego');" class=" tamaño-boton margen" src="img/volver.png" alt="">
                                 </div>
                         </div>
                 </div>
         </section>
+        <section id="ayuda2" class="none">
+        <div class="alturatotal">
+                <div class="ancho boton-centrado">                   
+                        <h1 class="tit">Ayuda</h1>      
+                </div>
+                <div class="cont">
+                        <div class="centrar margen4">
+                                <p>combina 2 piezas del mismo tipo para avanzar y ganar puntos</p>
+                        </div>
+                        <div>
+                                <div class="margen2 box">
+                                        <img class="0" src="img/Instrucciones.png"  alt="">
+                                </div>     
+                        </div>
+                        <div class="ancho centrar">
+                                <img  onclick="cambiodenone('ayuda2','config');" class="margen4 tamaño-boton" src="img/volver.png" alt="">d
+                        </div>
+                </div>
+        </section>
+        <section id="ayuda3" class="none">
+                        <div class="alturatotal">
+                                <div class="ancho boton-centrado">                   
+                                        <h1 class="tit">Ayuda</h1>      
+                                </div>
+                                <div class="cont">
+                                        <div class="centrar margen4">
+                                                <p>combina 2 piezas del mismo tipo para avanzar y ganar puntos</p>
+                                        </div>
+                                        <div>
+                                                <div class="margen2 box">
+                                                        <img class="0" src="img/Instrucciones.png"  alt="">
+                                                </div>     
+                                        </div>
+                                        <div class="ancho centrar">
+                                                <img  onclick="cambiodenone('ayuda3','pantinicial');" class="margen4 tamaño-boton" src="img/volver.png" alt="">d
+                                        </div>
+                                </div>
+                        </section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>

@@ -245,19 +245,22 @@ function verificarwin(){
     return 0;
 }
 
-function jugar(){
- document.getElementById("pantinicial").classList.add("none");
- document.getElementById("juego").classList.remove("none");
+function reload(){
+
+    cambiodenone("config","juego");
+    nameclass
+    for(i in botones){
+        nameclass = botones[i].classList[0];
+        botones[i].classList.remove(nameclass);
+        botones[i].classList.add("0");
+        botones[i].src= "img/0.png";  
+    }
+    setElement();
+    setElement();
 }
 
-function ayuda(){
-    
-}
-function config(){
-    document.getElementById("juego").classList.add("none");
-    document.getElementById("config").classList.remove("none");
-}
-function volverconfig(){
-    document.getElementById("juego").classList.remove("none");
-    document.getElementById("config").classList.add("none");
+
+function cambiodenone(pantall1,pantalla2){
+        document.getElementById(pantall1).classList.add("none");
+        document.getElementById(pantalla2).classList.remove("none");
 }
