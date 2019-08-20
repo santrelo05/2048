@@ -1,3 +1,20 @@
+@font-face{
+  font-family: Obelixpro;
+  src: url("../obelixpro/ObelixPro-cyr.ttf");
+}
+
+
+h1{
+  font-family: Obelixpro;
+  font-size:250%;
+}
+h2{
+  font-family: Obelixpro;
+  font-size: 150%;
+}
+
+
+
 html, body {
   height: 100vh;
   background-color: #B0920E;
@@ -52,6 +69,7 @@ html, body {
   margin: 0 auto;
   color: white;
   background-image: url("../img/tablero.png");
+  background-position: center center;
   background-size: 100%;
   background-repeat: no-repeat;
   padding: 5%;
@@ -119,17 +137,20 @@ html, body {
 }
 
 .pantallaconfig{
-  padding-top: 40%;
+  padding-top: 10%;
   height: 100%;
   padding-bottom: 40%;
 }
 
 .tit{
   margin: 0;
-  padding: 0 15% 0 15%; 
+  padding: 5%; 
 }
 .margen{
-  margin-top:50%;
+  margin-top:120%;
+}
+.margen2{
+  margin-top:10%;
 }
 .tamaño-boton{
   width: 100%;
@@ -138,7 +159,7 @@ html, body {
 }
 
 .ancho{
-  width: 50%;
+  width: 35%;
 }
 
 
