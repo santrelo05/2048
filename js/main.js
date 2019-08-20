@@ -1,5 +1,5 @@
 
-//setTimeout(hideLoader, 2 * 1000);
+setTimeout(hideLoader, 2 * 1000);
 function hideLoader() {
     
     document.getElementById("loading").classList.add("none");
@@ -242,11 +242,15 @@ function verificar(){
         if(parseInt(botones[i].classList[0]) == 0){
             return 0;
         }   
-        if(parseInt(botones[i].classList[0]) == parseInt(botones[i+1].classList[0])){
-            
-            return 0;
+    }
+    for(var i = 0 ; i < 4 ; i++){
+        for(var j = 0; i < 3 ; i++){
+            if(parseInt(botones[(i*4)+j].classList[0]) == parseInt(botones[(i*4)+(j+1)].classList[0])){
+                return 0;
+            }
         }
     }
+
     for(var i = 0 ; i<12;i++){
         if(parseInt(botones[i].classList[0]) == 0){
             return 0;
