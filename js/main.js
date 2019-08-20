@@ -30,7 +30,11 @@ let pila = [];
 var posicion,extra;
 var contayuda;
 var pila1=[];
+var tablero=[[0],[],[],[]]
+var contboton=0;
 var igual = 0;
+var verf= 0;
+var verfwin = 0;
 
 window.onload = init;
 
@@ -43,10 +47,15 @@ function init(){
 
 setElement();
 setElement();
-
 }
 
 function setElement(){
+    contboton=0;
+    verfwin = verificarwin();
+    verf = verificar();
+
+    if(verfwin==0){
+    if(verf==0){
     if(igual == 4){
     }
     else{
@@ -69,6 +78,14 @@ function setElement(){
         }
         cont = 0;
     }
+    }
+    else{
+       alert("perdiste");
+    }
+    }
+    else{
+        alert("ganaste");
+    } 
     igual = 0;
 }
 
@@ -165,6 +182,7 @@ function sumar(target,posicion,extra,multi1,multi2){
     if(longitud>1){
         for(var i = 0; i<pila.length;i++){
             if(pila[i] == pila[i+1]){
+                igual--;
                 suma = pila[i] + pila[i+1];
                 nameclass = botones[(target*multi1)+(posicion*multi2)].classList[0];
                 botones[(target*multi1)+(posicion*multi2)].classList.remove(nameclass);
@@ -195,6 +213,37 @@ function sumar(target,posicion,extra,multi1,multi2){
     pila1=[];
 }
 
+function verificar(){
+    for(var i = 0 ; i<15;i++){
+        if(parseInt(botones[i].classList[0])== 0){
+            return 0;
+        }   
+        if(parseInt(botones[i].classList[0]) == parseInt(botones[i+1].classList[0])){
+            
+            return 0;
+        }
+    }
+    for(var i = 0 ; i<12;i++){
+        if(parseInt(botones[i].classList[0])== 0){
+            return 0;
+        }   
+        if(parseInt(botones[i].classList[0]) == parseInt(botones[i+4].classList[0])){
+            return 0;
+        }
+    }
+    
+
+    return 1;
+
+}
+function verificarwin(){
+    for(var i = 0 ; i<16;i++){
+        if(parseInt(botones[i].classList[0]) == 2048){
+            return 1;
+        }   
+    }
+    return 0;
+}
 function ayuda(){
 
     if(contayuda==undefined){
