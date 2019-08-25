@@ -71,6 +71,25 @@ background-image: url("../img/Fondo-300x300.png");
   width: 100%;
   height: 100%;
 }
+.ayuda-arriba{
+  width: 100%;
+  height: 20%;
+}
+.ayuda-mitad{
+  width: 100%;
+  height: 40%;
+}
+.payuda-arriba{
+  width: 50%;
+  padding:10% 0;
+}
+.fondotit{
+  background-image: url("../img/tablero.png");
+  background-position: center center;
+  width: 50%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 
 .boton, .boton2{
   width: 50px;
@@ -214,7 +233,6 @@ background-image: url("../img/Fondo-300x300.png");
 }
 
 .tit{
-  margin: 0;
   padding: 10%; 
 }
 .margen{
@@ -246,6 +264,7 @@ background-image: url("../img/Fondo-300x300.png");
   width: 30%;
   padding-top: 15%;
 }
+
 
 
 .anchoganaste{
