@@ -33,9 +33,43 @@ p{
 
 
 
-html, body {
-  height: 100vh;
+html, body, section {
+  width: 100%;
+  height: 100%;
   background-color: #eae486;
+}
+section{
+  padding: 10% 5%;
+}
+.bkground{
+background-image: url("../img/Fondo-300x300.png");
+}
+.all{
+  width: 100%;
+  height: 100%;
+}
+.botonayuda{
+  width: 10%;
+  height: 5%;
+  float: right;
+  display: block;
+}
+.box-ini{
+  width: 100%;
+  height: 100%;
+}
+.box-ini-mitad{
+  width: 100%;
+  height: 80%;
+}
+.box-ini-abajo{
+  width: 100%;
+  height: 20%;
+}
+.imgcentro{
+  background-position: center center;
+  width: 100%;
+  height: 100%;
 }
 
 .boton, .boton2{
@@ -61,14 +95,7 @@ html, body {
   display: none;
 }
 
-.alturatotal1{
-  
- 
-  width: 100%;
-  height: 100vh;
-  background-image: url("../img/inicio.png");
-  background-repeat: no-repeat;
-}
+
 .alturatotal{
   width: 100%;
   height: 100vh;
@@ -216,15 +243,10 @@ html, body {
   width: 35%;
 }
 .box-inicio{
-  width: 50%;
+  width: 30%;
   padding-top: 15%;
 }
-.box-ini{
-  width: 9%;
-  padding-top: 5%;
-  margin-right: 5%;
-  float: right;
-}
+
 
 .anchoganaste{
   width: 100%;
