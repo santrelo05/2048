@@ -10,7 +10,7 @@
     <title>Document</title> 
 </head>
 <body>  
-        <section id="loading" class="">
+        <section id="loading" class="none">
                 <div class="cont">
                         <h1 class="tit margen5">Cargando...</h1>
                 </div>
@@ -18,20 +18,20 @@
         </section>
         <section id="pantinicial" class="none bkground">
                 <div class="all">
-                <div class="botonayuda">
-                        <img class="box-ini" onclick="cambiodenone('pantinicial','ayuda3');" src="img/ayuda.png" alt="">
-                </div>
-                <div class="box-ini-mitad">
-                        <img class="imgcentro" src="img/Titulo_personajes.png" alt="">
-                </div>
-                <div class="box-ini-abajo">
-                        <img class="box-inicio centrar" onclick="cambiodenone('pantinicial','juego');" src="img/play.png" alt="">
-                </div>
+                        <div class="botonayuda">
+                                <img class="box-ini" onclick="cambiodenone('pantinicial','ayuda3');" src="img/ayuda.png" alt="">
+                        </div>
+                        <div class="box-ini-mitad">
+                                <img class=" centrar imgcentro" src="img/Titulo_personajes.png" alt="">
+                        </div>
+                        <div class="box-ini-abajo">
+                                <img class="box-inicio centrar" onclick="cambiodenone('pantinicial','juego');" src="img/play.png" alt="">
+                        </div>
                 </div>
         </section>
-        <section id="juego" class="none bkground">
+        <section id="juego" class="bkground">
                 <div class="all">
-                        <div class="cont-up-down">
+                        <div class="box-ini-abajo">
                                 <div class="barra">
                                         <div class="puntaje-max">
                                                 <div class="puntaje">
@@ -39,68 +39,62 @@
                                                 </div>
                                         </div>
                                         <div class="reduce box">
-                                                <img class="" onclick="cambiodenone('juego','ayuda')" src="img/bombillo.png" alt="">
-                                                <img class="none" onClick="document.location.reload(true)" src="img/deshacer.png" alt="">
-                                                <img class="" onclick="cambiodenone('juego','config');" src="img/ajustes.png" alt="">
+                                                <img class="pad1" onclick="cambiodenone('juego','ayuda')" src="img/bombillo.png" alt="">
+                                                <img class="pad1" onclick="cambiodenone('juego','config');" src="img/ajustes.png" alt="">
                                         </div>
                                 </div>
                         </div>
-                        <div class="cont">
-                                <div id="cuadro" class="box-container">
-                                        
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                        <div class="icon-box box">
-                                                <img class="caja" src="img/0.png"  alt="">
-                                        </div>
-                                
-                                        
+                        <div id="cuadro" class="centrar box-juego">
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
+                                </div>
+                                <div class="icon-box box">
+                                        <img class="caja" src="img/0.png"  alt="">
                                 </div>
                         </div>
-                        <div class="cont-up-down box">
+                        <div class="box-ini-abajo">
                                 <div class="boton-centrado padding2">
                                         <h2 id="Record">Record: 999999</h2>
                                 </div>
@@ -149,7 +143,7 @@
                                 </div>
                         </div>
                         <div class="ayuda-mitad box">
-                                <img class="0" src="img/Instrucciones.png"  alt="">
+                                <img class="imgcentro" src="img/Instrucciones.png"  alt="">
                         </div>     
                         <div class="ayuda-arriba centrar">
                                 <div class="payuda-arriba centrar">
@@ -172,8 +166,8 @@
                                         <p>combina 2 piezas del mismo tipo para avanzar y ganar puntos</p>
                                 </div>
                         </div>
-                        <div class="ayuda-mitad box">
-                                <img class="0" src="img/Instrucciones.png"  alt="">
+                        <div class="ayuda-mitad">
+                                <img class="centrar imgcentro" src="img/Instrucciones.png"  alt="">
                         </div>     
                         
                         <div class="ayuda-arriba centrar">

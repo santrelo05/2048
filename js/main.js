@@ -1,5 +1,5 @@
 
-setTimeout(hideLoader, 2 * 1000);
+//setTimeout(hideLoader, 2 * 1000);
 function hideLoader() {
     
     document.getElementById("loading").classList.add("none");
