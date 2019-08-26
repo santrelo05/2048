@@ -10,7 +10,7 @@
     <title>Document</title> 
 </head>
 <body>  
-        <section id="loading" class="none">
+        <section id="loading" class="">
                 <div class="cont">
                         <h1 class="tit margen5">Cargando...</h1>
                 </div>
@@ -29,7 +29,7 @@
                         </div>
                 </div>
         </section>
-        <section id="juego" class="bkground">
+        <section id="juego" class="none bkground">
                 <div class="all">
                         <div class="box-ini-abajo">
                                 <div class="barra">
@@ -114,18 +114,24 @@
 
                 </div>
         </section>
-        <section id="config" class="none">
-                <div class="alturatotal">
-                        <div class="pantallaconfig">
+        <section id="config" class="bkground none">
+                <div class="all">
+                        <div class="box-ini-abajo">
                                 <div class="ancho boton-centrado">                   
                                         <h1 class="tit">Ajustes</h1>      
                                 </div>
-                                <div class="ancho centrar">
-                                        <img onclick="cambiodenone('config','ayuda2');" class="tamaño-boton margen" src="img/ayuda2.png" alt="">
-                                        <img onclick="reload('config','juego')" class="tamaño-boton margen2" src="img/reiniciar.png" alt="">
-                                        <img  onclick="cambiodenone('config','juego');" class=" tamaño-boton margen" src="img/volver.png" alt="">
-                                </div>
                         </div>
+                        <div class="box-juego">
+                                <div class="payuda-arriba2 centrar">   
+                                        <img onclick="cambiodenone('config','ayuda2');" class="tamaño-boton pad2 " src="img/ayuda2.png" alt="">
+                                        <img onclick="reload('config','juego')" class="tamaño-boton pad2" src="img/reiniciar.png" alt="">
+                               </div>
+                        </div>
+                        <div class="ayuda-arriba centrar">
+                                <div class="payuda-arriba centrar">
+                                        <img onclick="cambiodenone('config','juego');" class="tamaño-boton " src="img/volver.png" alt="">
+                                </div>
+                        </div>  
                 </div>
         </section>
         
