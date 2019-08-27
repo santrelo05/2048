@@ -11,10 +11,16 @@
 </head>
 <body>  
         <section id="loading" class="">
-                <div class="cont">
-                        <h1 class="tit margen5">Cargando...</h1>
+                <div class="all">
+                        <div class="box-loading1">
+                                <img class=" centrar imgcentro3" src="img/gif-splash.gif" alt="">
+                        </div>
+                        <div class="box-ini-abajo">
+                                <div class="centrar">
+                                        <h1 class="tit2">Cargando...</h1>
+                                </div>
+                        </div>
                 </div>
-               
         </section>
         <section id="pantinicial" class="none bkground">
                 <div class="all">
@@ -186,44 +192,38 @@
                         </div>
                 </div>
         </section>
-        <section id="ganaste" class="none">
-                <div class="alturatotal">
-                                <div class="ancho boton-centrado">                   
-                                                <h1 class="tit">Ganaste</h1>      
+        <section id="ganaste" class="bkground none">
+                <div class="all">
+                        <div class="ancho boton-centrado">                   
+                                <h1 class="tit">Ganaste</h1>      
+                        </div>
+                        <div class="box-juego">
+                                <img class="centrar imgcentro2" src="img/Ganaste.png" alt="">
+                        </div>
+
+                        <div class="ayuda-arriba centrar">
+                                <div class="payuda-arriba3 centrar">
+                                        <img  onclick="reload('ganaste','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
                                 </div>
-                        <div class="anchoganaste">
-                                      
-                                <img class="fotoganaste" src="img/Ganaste.png" alt="">
-                             
                         </div>
-
-                         
-                        <div class="ancho centrar">
-                                <img  onclick="reload('ganaste','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
-                        </div>
-
                 </div>
 
         </section>
-        <section id="perdiste" class="none">
-                        <div class="alturatotal">
-                                        <div class="ancho boton-centrado">                   
-                                                <h1 class="tit">Perdiste</h1>      
-                                        </div>
-                                <div class="anchoperdiste">
-                                              
-                                        <img class="fotoperdiste" src="img/Terminado.png" alt="">
-                                     
-                                </div>
-        
-                                 
-                                <div class="ancho centrar">
+        <section id="perdiste" class="bkground none">
+                <div class="all">
+                        <div class="ancho boton-centrado">                   
+                                <h1 class="tit">Perdiste</h1>      
+                        </div>
+                        <div class="box-juego">
+                                <img class="centrar imgcentro2" src="img/Terminado.png" alt="">
+                        </div>
+                        <div class="ayuda-arriba centrar">
+                                <div class="payuda-arriba3 centrar">
                                         <img  onclick="reload('perdiste','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
                                 </div>
-        
                         </div>
-        
-                </section>
+                </div>
+        </section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
