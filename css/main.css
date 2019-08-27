@@ -71,8 +71,20 @@ background-image: url("../img/Fondo-300x300.png");
 }
 .imgcentro{
   background-position: center center;
+  width: 100%;
+}
+
+.imgcentro2{
+  background-position: center center;
+  width: 100%;
   height: 100%;
 }
+
+.imgcentro3{
+  background-position: center center;
+  height: 100%;
+}
+
 .ayuda-arriba{
   width: 100%;
   height: 20%;
@@ -181,19 +193,11 @@ background-image: url("../img/Fondo-300x300.png");
 }
 
 .icon-box {
+  display: block;
   width:22%;
-  display: inline;
   float: left;
   margin: 1.3%;
 
-}
-.icon-box2{
-  width:17%;
-  display: inline;
-  float: left;
-  margin: 1.3%;
-  text-align: center;
-  color: white;
 }
 
 .box img{
@@ -224,20 +228,13 @@ background-image: url("../img/Fondo-300x300.png");
   float: right;
 }
 .puntaje{
-  width:50%;
   display: inline;
-  float: left;
 
 }
 .puntaje-max{
   width: 50%;
 }
 
-.sisi:hover{
-  -webkit-transition: width 2s;
-  width: 30%;
-  height: 30%;
-}
 
 .pantallaconfig{
   padding-top: 10%;
