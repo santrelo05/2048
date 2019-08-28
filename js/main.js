@@ -1,34 +1,3 @@
-
-setTimeout(hideLoader, 2 * 1000);
-function hideLoader() {
-    
-    document.getElementById("loading").classList.add("none");
-    document.getElementById("pantinicial").classList.remove("none");
-
-}
-var element = document.getElementById("cuadro");
-
-var mc = new Hammer(element);
-mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-
-mc.on("swipeleft", function () { 
-    moveLeft();
-}); 
-
-mc.on("swiperight", function () { 
-    moveRight();
-});
-
-mc.on("swipeup", function () { 
-    moveUp();
-}); 
-
-mc.on("swipedown", function () {
-    moveDown();
-});
-
-
-let botones = Array.from(document.querySelectorAll(".caja"));
 var nameclass,suma;
 let cont = 0;
 let pila = [];
@@ -43,15 +12,25 @@ var verfwin = 0;
 var puntaje=0;
 var record=[0];
 var mxrecord=0;
+let botones;
+var element;
+var mc;
 
 window.onload = init;
 
-
 function init(){
-    for(i in botones){
-        botones[i].classList.remove("caja");
-        botones[i].classList.add("0");
-    }
+    let miPrimeraPromise = new Promise((resolve, reject) =>{
+        botones = Array.from(document.querySelectorAll(".caja"));
+        resolve(botones);
+    });
+    let miSegundaPromise = new Promise((resolve, reject) =>{
+        element = document.getElementById("cuadro");
+        resolve(element);
+    });
+    miPrimeraPromise.then(botonsito());
+    miPrimeraPromise.catch(console.log("no cargo botones"));
+    miSegundaPromise.then(hammerset());
+    miSegundaPromise.catch(console.log("no cargo element"));
 
     for(i in record){
         if(record[i]>mxrecord){
@@ -59,8 +38,44 @@ function init(){
         }
     }
     document.getElementById("Record").innerHTML = "Record: "+mxrecord;
-setElement();
-setElement();
+    
+//setTimeout(hideLoader, 2 * 1000);
+hideLoader();
+}
+
+function botonsito(){
+    for(i in botones){
+        botones[i].classList.remove("caja");
+        botones[i].classList.add("0");
+    }
+    setElement();
+    setElement();
+}
+function hammerset(){
+    mc = new Hammer(element);
+    mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    
+    mc.on("swipeleft", function () { 
+        moveLeft();
+    }); 
+    
+    mc.on("swiperight", function () { 
+        moveRight();
+    });
+    
+    mc.on("swipeup", function () { 
+        moveUp();
+    }); 
+    
+    mc.on("swipedown", function () {
+        moveDown();
+    });
+}
+function hideLoader() {
+    
+    document.getElementById("loading").classList.add("none");
+    document.getElementById("pantinicial").classList.remove("none");
+
 }
 
 function setElement(){
