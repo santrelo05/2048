@@ -14,63 +14,46 @@ var record=[0];
 var mxrecord=0;
 let botones;
 var element;
-var mc;
+var Record;
+var Puntaje;
+
 
 window.onload = init;
+alert("pasaste el init");
 
 function init(){
-    let miPrimeraPromise = new Promise((resolve, reject) =>{
-        botones = Array.from(document.querySelectorAll(".caja"));
-        resolve(botones);
-    });
-    let miSegundaPromise = new Promise((resolve, reject) =>{
-        element = document.getElementById("cuadro");
-        resolve(element);
-    });
-    miPrimeraPromise.then(botonsito());
-    miPrimeraPromise.catch(console.log("no cargo botones"));
-    miSegundaPromise.then(hammerset());
-    miSegundaPromise.catch(console.log("no cargo element"));
+    alert("entraste al init");
+    botones = Array.from(document.querySelectorAll(".caja"));
+    alert("entraste al init botones");
+    Puntaje = document.getElementById("Puntaje");
+    alert("entraste al init puntaje");
+    element = document.getElementById("cuadro");
+    alert("entraste al init element");
+    Record =  document.getElementById("Record");
+    alert("entraste al init record");
+    
+    
+    alert("pasaste el swipe");
 
     for(i in record){
         if(record[i]>mxrecord){
             mxrecord=record[i];
         }
     }
-    document.getElementById("Record").innerHTML = "Record: "+mxrecord;
-    
-//setTimeout(hideLoader, 2 * 1000);
-hideLoader();
-}
-
-function botonsito(){
+    Record.innerHTML = "Record: "+mxrecord;
+    alert("pasaste el record");
     for(i in botones){
         botones[i].classList.remove("caja");
         botones[i].classList.add("0");
     }
+    alert("pasaste botones");
     setElement();
     setElement();
+//setTimeout(hideLoader, 2 * 1000);
+hideLoader();
 }
-function hammerset(){
-    mc = new Hammer(element);
-    mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
-    
-    mc.on("swipeleft", function () { 
-        moveLeft();
-    }); 
-    
-    mc.on("swiperight", function () { 
-        moveRight();
-    });
-    
-    mc.on("swipeup", function () { 
-        moveUp();
-    }); 
-    
-    mc.on("swipedown", function () {
-        moveDown();
-    });
-}
+
+
 function hideLoader() {
     
     document.getElementById("loading").classList.add("none");
@@ -247,7 +230,7 @@ function sumar(target,posicion,extra,multi1,multi2){
         botones[(target*multi1)+(posicion*multi2)].classList.add(suma);
         botones[(target*multi1)+(posicion*multi2)].src = "img/"+suma+".png";
     }
-    document.getElementById("Puntaje").innerHTML="Puntaje:<br>"+puntaje;
+    Puntaje.innerHTML="Puntaje:<br>"+puntaje;
     pila=[];
     pila1=[];
 }
@@ -296,8 +279,8 @@ function reload(pantalla1,pantalla2){
             mxrecord=record[i];
         }
     }
-    document.getElementById("Record").innerHTML = "Record: "+mxrecord;
-    document.getElementById("Puntaje").innerHTML="Puntaje:<br>"+puntaje;
+    Record.innerHTML = "Record: "+mxrecord;
+    Puntaje.innerHTML="Puntaje:<br>"+puntaje;
     cambiodenone(pantalla1,pantalla2);
     nameclass
     for(i in botones){
@@ -314,4 +297,26 @@ function reload(pantalla1,pantalla2){
 function cambiodenone(pantall1,pantalla2){
         document.getElementById(pantall1).classList.add("none");
         document.getElementById(pantalla2).classList.remove("none");
+}
+
+function empezarjuego(){
+var mc = new Hammer(element);
+mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+mc.on("swipeleft", function () { 
+    moveLeft();
+}); 
+
+mc.on("swiperight", function () { 
+    moveRight();
+});
+
+mc.on("swipeup", function () { 
+    moveUp();
+}); 
+
+mc.on("swipedown", function () {
+    moveDown();
+});
+
+cambiodenone('pantinicial','juego');
 }
