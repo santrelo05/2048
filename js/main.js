@@ -17,23 +17,13 @@ var element;
 var Record;
 var Puntaje;
 
-
 window.onload = init;
-alert("pasaste el init");
 
 function init(){
-    alert("entraste al init");
     botones = Array.from(document.querySelectorAll(".caja"));
-    alert("entraste al init botones");
     Puntaje = document.getElementById("Puntaje");
-    alert("entraste al init puntaje");
     element = document.getElementById("cuadro");
-    alert("entraste al init element");
     Record =  document.getElementById("Record");
-    alert("entraste al init record");
-    
-    
-    alert("pasaste el swipe");
 
     for(i in record){
         if(record[i]>mxrecord){
@@ -41,24 +31,20 @@ function init(){
         }
     }
     Record.innerHTML = "Record: "+mxrecord;
-    alert("pasaste el record");
     for(i in botones){
         botones[i].classList.remove("caja");
         botones[i].classList.add("0");
     }
-    alert("pasaste botones");
     setElement();
     setElement();
-//setTimeout(hideLoader, 2 * 1000);
-hideLoader();
+setTimeout(hideLoader, 2 * 1000);
+//hideLoader();
 }
 
 
 function hideLoader() {
-    
     document.getElementById("loading").classList.add("none");
     document.getElementById("pantinicial").classList.remove("none");
-
 }
 
 function setElement(){
