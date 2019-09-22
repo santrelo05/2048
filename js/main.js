@@ -115,7 +115,7 @@ function setElement(){
             recmundial.push(obj);
             recmundial.sort((a,b)=>b.puntaje-a.puntaje);
             recmundial.pop();
-            for(i in recmundial){
+            for(var i = 0 ; i<10; i++){
                 var ref = firebase.database().ref("Record/v"+i);
                 ref.update({
                   "nombre" : recmundial[i].nombre,
@@ -157,7 +157,7 @@ function setElement(){
         recmundial.push(obj);
         recmundial.sort((a,b)=>b.puntaje-a.puntaje);
         recmundial.pop();
-        for(i in recmundial){
+        for(var i = 0 ; i<10; i++){
             var ref = firebase.database().ref("Record/v"+i);
             ref.update({
               "nombre" : recmundial[i].nombre,
