@@ -22,6 +22,62 @@
                         </div>
                 </div>
         </section>
+        <section id="Registro" class="none bkground">
+               <div class="box-ini-abajo">
+                        <div class="ancho boton-centrado">                   
+                                <h1 class="tit">Registro</h1>      
+                        </div>
+                </div>
+                <div class="roro">
+
+                </div>
+                <div class="roro">
+                </div>
+                <div class="roro">
+                <input id="username" type="text" placeholder="Nombre Jugador">
+                </div>
+                <div class="roro">
+                <input id="contra" type="text" placeholder="Clave">
+                </div>
+                <div class="roro">
+                        
+                </div>
+                <div class="roro">
+                        
+                </div>
+                <div class="roro">
+                        <div class="btnregis" onclick="Registro()">
+
+                        </div>
+                </div>
+        </section>
+        <section id="Login" class="none bkground">
+                <div class="ayuda-mitad">
+                        <img class="centrar imgcentrologin"src="img/thumbnail_roadlogin.png" alt="">
+                </div>
+                <div class="roro">
+                        <input id="usernameL" type="text" placeholder="Nombre Jugador">
+                </div>
+                <div class="roro">
+                        <input id="contraL" type="password" placeholder="Clave">
+                </div>
+                <div class="roro">
+
+                </div>
+                <div class="roro">
+                        <div class="btnlogins" onclick="Login()">
+
+                        </div>
+                </div>
+                <div class="roro">
+
+                </div>
+                <div class="roro">
+                        <p>No tienes cuenta?<a onclick="cambiodenone('Login','Registro');">crea una</a></p>        
+                </div>
+                <!-- <button onclick="cambiodenone('Login','Registro');">Registro</button>-->  
+
+        </section>
         <section id="pantinicial" class="none bkground">
                 <div class="all">
                         <div class="botonayuda">
@@ -192,39 +248,190 @@
                         </div>
                 </div>
         </section>
-        <section id="ganaste" class="bkground none">
+        <section id="ganaste" class="none bkground">
                 <div class="all">
                         <div class="ancho boton-centrado">                   
                                 <h1 class="tit">Ganaste</h1>      
                         </div>
-                        <div class="box-juego">
-                                <img class="centrar imgcentro2" src="img/Ganaste.png" alt="">
+                        <div class="ayuda-mitad2">
+                                <img class="centrar imgcentro3" src="img/Ganaste.png" alt="">
                         </div>
 
                         <div class="ayuda-arriba centrar">
                                 <div class="payuda-arriba3 centrar">
-                                        <img  onclick="reload('ganaste','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
+                                        <img  onclick="cambiodenone('ganaste','record');" class="tamaño-boton" src="img/thumbnail_records.png" alt="">
+                                        <br><br>
+                                        <img  onclick="reload2('ganaste','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
                                 </div>
                         </div>
                 </div>
 
         </section>
-        <section id="perdiste" class="bkground none">
+        <section id="perdiste" class="none bkground">
                 <div class="all">
                         <div class="ancho boton-centrado">                   
                                 <h1 class="tit">Perdiste</h1>      
                         </div>
-                        <div class="box-juego">
-                                <img class="centrar imgcentro2" src="img/Terminado.png" alt="">
+                        <div class="ayuda-mitad">
+                                <img class="centrar imgcentro3" src="img/Terminado.png" alt="">
                         </div>
+                        <br><br>
                         <div class="ayuda-arriba centrar">
                                 <div class="payuda-arriba3 centrar">
-                                        <img  onclick="reload('perdiste','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
+                                        <img  onclick="cambiodenone('perdiste','record');" class="tamaño-boton" src="img/thumbnail_records.png" alt="">
+                                        <br><br>
+                                        <img  onclick="reload2('perdiste','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <section id="record" class="none bkground">
+                <div class="all">
+                        <div class="ayuda-arriba">
+                                <div class="centrar fondotit">                 
+                                        <h1 class="centrar tit">Record</h1>
+                                </div>      
+                        </div>
+                       
+                        <div class="flexrecord">
+                                <div id="recordtit1" class="recordtit1" onclick="topcol()"> 
+                                        <p>Top Col</p>
+                                </div>
+                                <div id="recordtit2" class="recordtit2"onclick="mitop()">
+                                        <p>Mi top</p>
+                                </div>
+                        </div>
+                        <div class="flexli gray">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p class="blk">1</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>
+                        </div>
+                        <div class="flexli white">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p  class="blk">2</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>
+                        </div>
+                        <div class="flexli gray">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p  class="blk">3</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>
+                        </div>
+                        <div class="flexli white">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p  class="blk">4</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>
+                        </div>
+                        <div class="flexli gray">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p  class="blk">5</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>                               
+                        </div>
+                        <div class="flexli white">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p  class="blk">6</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>
+                        </div>
+                        <div class="flexli gray">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p  class="blk">7</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>                        
+                        </div>
+                        <div class="flexli white">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p  class="blk">8</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>
+                        </div>
+                        <div class="flexli gray">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p  class="blk">9.</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>                          
+                        </div>
+                        <div class="flexli white">
+                               <div class="flexli">
+                                        &nbsp
+                                        &nbsp
+                                        <p  class="blk">10)</p> 
+                                        &nbsp &nbsp
+                                        <p  class="blk nameRec">santiago</p>
+                               </div>
+                               <div>
+                                        <p  class="blk pointRec">2545</p>
+                               </div>
+                        </div>
+                        <br><br>
+                       <div class="ayuda-arriba centrar">
+                                <div class="payuda-arriba3 centrar">
+                                        <img  onclick="reload2('record','juego');" class="tamaño-boton" src="img/nuevo.png" alt="">
                                 </div>
                         </div>
                 </div>
         </section>
 </body>
+<script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-database.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/hammer.min.js"></script>
 
