@@ -499,8 +499,8 @@ function Registro(){
  
 }
 function Login(){
-    var name = document.getElementById("usernameL").value;
-    var contra = document.getElementById("contraL").value;
+    var name = document.getElementById("usernameL").value.toLowerCase();
+    var contra = document.getElementById("contraL").value.toLowerCase();
     var ref = firebase.database().ref("Usuarios");
         ref.once("value")
         .then(function(snapshot) {
