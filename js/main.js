@@ -46,8 +46,7 @@ function init(){
     }
     setElement();
     setElement();
-setTimeout(hideLoader, 2 * 1000);
-//hideLoader();
+    setTimeout(hideLoader, 2 * 1000);
 }
 
 
@@ -455,8 +454,8 @@ function push(){
 }
 
 function Registro(){
-    var name = document.getElementById("username").value;
-    var contra = document.getElementById("contra").value; 
+    var name = document.getElementById("username").value.toLowerCase();
+    var contra = document.getElementById("contra").value.toLowerCase(); 
     var ref = firebase.database().ref("Usuarios");
         ref.once("value")
         .then(function(snapshot) {
@@ -548,7 +547,12 @@ function Login(){
 function topcol(){
     var r1 = document.getElementById("recordtit1");
     var r2 = document.getElementById("recordtit2");
+    var mitopimg = document.getElementById("Mitop");
+    mitopimg.src="img/colombiabrown.png";
+    mitopimg.classList.remove("acortarimg");
 
+    var mitopimg2 = document.getElementById("Mitop2");
+    mitopimg2.src="img/thumbnail_worldwhite.png";
     r1.classList.remove("rr1");
     r2.classList.remove("rr2");
     for(i in recname){
@@ -560,6 +564,14 @@ function topcol(){
 function mitop(){
     var r1 = document.getElementById("recordtit1");
     var r2 = document.getElementById("recordtit2");
+
+    var mitopimg = document.getElementById("Mitop");
+    mitopimg.src="img/colombiawhite.png";
+    mitopimg.classList.add("acortarimg");
+    
+    var mitopimg2 = document.getElementById("Mitop2");
+    mitopimg2.src="img/thumbnail_worldbrown.png";
+    
 
     r1.classList.add("rr1");
     r2.classList.add("rr2");
